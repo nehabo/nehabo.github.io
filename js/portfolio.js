@@ -1,9 +1,6 @@
-// Freelancer Theme JavaScript
-
 (function($) {
-    "use strict"; // Start of use strict
+    "use strict";
 
-    // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('.page-scroll a').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -12,25 +9,21 @@
         event.preventDefault();
     });
 
-    // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
         target: '.navbar-fixed-top',
         offset: 51
     });
 
-    // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function(){ 
+    $('.navbar-collapse ul li a').click(function(){
             $('.navbar-toggle:visible').click();
     });
 
-    // Offset for Main Navigation
     $('#mainNav').affix({
         offset: {
             top: 100
         }
     })
 
-    // Floating label headings for the contact form
     $(function() {
         $("body").on("input propertychange", ".floating-label-form-group", function(e) {
             $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
@@ -41,4 +34,4 @@
         });
     });
 
-})(jQuery); // End of use strict
+})(jQuery);
